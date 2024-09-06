@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barkod Okuyucu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo-link">
+        <img src="images/1072929668729-855-berklogo.png" alt="Berk Yazılım" class="logo">
+      </a>
+    </div>
+  </header>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-6 d-flex flex-column align-items-center">
+        <h1 class="mb-4">BARKOD OKUYUCU</h1>
+        <div class="form-group mb-4">
+          <label for="barcodeInput" class="form-label">Barkodu Girin:</label>
+          <input type="text" class="form-control" id="barcodeInput" placeholder="Barkodu yazın">
+        </div>
+        <button class="btn camera-btn mb-2" id="fetchPrice">Fiyatı Getir</button>
+        <button class="btn camera-btn mb-4" onclick="startCamera()">Kamera ile Barkod Okut</button>
+        <div id="interactive" class="viewport mb-4">
+          <video id="video" autoplay></video>
+        </div>
+        <div class="result-box">
+          <p>Ürün Fiyatı: <span id="price">-</span></p>
+        </div>
+      </div>
+
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <div class="contact-container p-4">
+          <h2 class="mb-4">İletişim Bilgileri</h2>
+          <p><img src="images/address-icon.png" alt="Adres"> Lalapaşa Mah. Kazım Karabekir Cd. No:48 Yakutiye/Erzurum</p>
+          <p><img src="images/phone-icon.png" alt="Telefon">  0 442 442 20 20</p>
+          <p><img src="images/email-icon.png" alt="Email"> fatih@berkyazilim.com</p>
+          <p><img src="images/clock-icon.png" alt="Çalışma Saatleri"> Pazartesi - Cuma, 09:00 - 18:00</p>
+        </div>
+
+        <div class="social-media">
+          <a href="https://www.linkedin.com/company/berk-yazilim-bi%CC%87li%CC%87%C5%9Fi%CC%87m-ltd-%C5%9Fti%CC%87/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://berkyazilim.com/#" target="_blank" class="social-icon">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="https://www.instagram.com/berkyazilim?" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/905067119129" target="_blank" class="social-icon">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@zxing/library@latest"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
